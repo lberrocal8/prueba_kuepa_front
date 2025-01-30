@@ -9,6 +9,7 @@ import {
 import Chat from "@/app/dashboard/chat"
 import { Button } from "@/components/ui/button"
 import { useRouter } from 'next/navigation'
+import { useEffect } from 'react'
 
 export default function Dashboard() {
   const router = useRouter();
@@ -18,6 +19,15 @@ export default function Dashboard() {
     localStorage.clear();
     router.push('/');
   }
+
+  useEffect(() => {
+    const token = sessionStorage.getItem('token');
+    
+    if (!token) {
+      alert("No autorizado. Inicia sesión antes")
+      router.push('/');
+    }
+  }, [router]);
 
   return (
     <main className="flex flex-col items-center justify-center font-[family-name:var(--font-geist-sans)] min-h-screen">
