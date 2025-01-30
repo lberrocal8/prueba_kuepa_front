@@ -4,7 +4,7 @@ Esta sección abarca el stack del front-end de la aplicación. Las siguientes so
 - **Next.js** (última versión disponible: v15.1.6).
 - **Node** (última versión disponible: v22.12.0).
 - **Tailwind CSS** (última versióin disponible: v4.0).
-
+- **Shadcn/ui**
 
 ## Instalación
 
